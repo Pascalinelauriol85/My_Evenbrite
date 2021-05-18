@@ -1,0 +1,74 @@
+
+<div class="container bootstrap snippets bootdey carte">
+    <div class="panel-body inf-content">
+        <div class="row">
+
+        <div class="col-md-4">
+            <img alt="" style="width:600px;" title="" class="img-circle img-thumbnail isTooltip" src="https://bootdey.com/img/Content/avatar/avatar7.png" data-original-title="Usuario"> 
+            <ul title="Ratings" class="list-inline ratings text-center">
+                <li><a href="#"><span class="glyphicon glyphicon-star"></span></a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-star"></span></a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-star"></span></a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-star"></span></a></li>
+                <li><a href=""><span class="glyphicon glyphicon-star"></span></a></li>
+            </ul>
+        </div>
+
+        <div class="col-md-6">
+            <br>
+            <div class="table-responsive">
+            <table class="table table-user-information">
+                <tbody>
+                     <tr>    
+                        <td>
+                            <strong>
+                                <span class="glyphicon glyphicon-user  text-primary"></span>    
+                                <p>Prénom</p>                                                
+                            </strong>
+                        </td>
+                        <td class="text-primary">
+                            <span class='yellow'><%=@user.first_name%></span>    
+                        </td>
+                    </tr>
+                    <tr>        
+                        <td>
+                            <strong>
+                                <span class="glyphicon glyphicon-cloud text-primary"></span>  
+                                <p>Nom</p>                                                
+                            </strong>
+                        </td>
+                        <td class="text-primary">
+                            <span class='yellow'><%=@user.last_name%></span>  
+                        </td>
+                    </tr>
+
+                    <tr>        
+                        <td>
+                            <strong>
+                                <span class="glyphicon glyphicon-envelope text-primary"></span> 
+                                <p>Email</p>                                                
+                            </strong>
+                        </td>
+                        <td class="text-primary">
+                            <span class='yellow'><%=@user.email%></span> 
+                        </td>
+                    </tr>
+                       
+                        <td>
+                            <strong>
+                                <span class="glyphicon glyphicon-calendar text-primary"></span>
+                                <p>Description</p>                                                
+                            </strong>
+                        </td>
+                        <td class="text-primary">
+                             <span class='yellow'><%=@user.description%></span>
+                        </td>
+                    </tr>   
+                          <a href=<%=edit_user_path%>><button type="button"class="btn btn-outline btn-lg px-4 me-sm-3 my-3"id="yellow-button">Actualise ou modifie ton profil</button></a>                                                       
+                </tbody>
+            </table>
+            </div>
+
+        </div>
+    </div>
+</div>
