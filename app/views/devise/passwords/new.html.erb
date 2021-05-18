@@ -1,4 +1,10 @@
-<h2>Forgot your password?</h2>
+<div class="jumbotron text-center" style="background-image: url(https://as1.ftcdn.net/v2/jpg/03/15/46/02/1000_F_315460238_r9VGtbJzt7emruDKEY2ouioFPdcbMKs4.jpg); background-size: 100%;">>
+  <h1 class="display-4" style="color: #592316;"><strong>Tu as perdu ton mot de passe ?</strong></h1>
+  <p class="lead" style="color: #592316;"><strong>Note le pour la prochaine fois  😜  </p>
+  <hr class="my-4">
+  <p class="lead">
+  </p>
+</div>
 
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>

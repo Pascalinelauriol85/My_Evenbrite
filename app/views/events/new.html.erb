@@ -1,0 +1,59 @@
+<!--jumbotron -->
+<div class="jumbotron text-center" style="background-image: url(https://as1.ftcdn.net/v2/jpg/03/15/46/02/1000_F_315460238_r9VGtbJzt7emruDKEY2ouioFPdcbMKs4.jpg); background-size: 100%;">>
+  <h1 class="display-4" style="color: #592316;"><strong>Super crée ton évènement !</strong></h1>
+  <p class="lead" style="color: #592316;"><strong>Voici l'ensemble des conditions à remplir </p>
+  <hr class="my-4">
+  <p class="lead">
+  </p>
+</div>
+
+
+<div class="container mb-5">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <br><br><br>
+      <%=form_tag url_for(action: 'create'),class: "form-signin mt-3", method: "post" do %>
+        <h1 class="h3 mb-3 font-weight-normal text-center">Créer un évènement</h1>
+
+        <div class='form-group'>
+          <label>Titre</label><br>
+          <%= text_field_tag 'title',"", class: 'form-control'%>
+        </div>
+
+        <div class='form-group'>
+          <label>Description</label><br>
+          <%= text_area_tag 'description',"", class:'form-control'%>
+        </div>
+
+        <div class='form-group'>
+          <label>Durée</label><br>
+          <%= number_field_tag 'duration',"", class:'form-control'%>
+        </div>
+
+        <div class='form-group'>
+          <label>Prix</label><br>
+          <%= number_field_tag 'price',"", class:'form-control'%>
+        </div>
+
+        <div class='form-group'>
+          <label>Lieu</label><br>
+          <%= text_field_tag 'location',"", class:'form-control'%>
+        </div>  
+
+        <div class='form-group'>
+          <label>Date et heure de départ</label><br>
+          <%= datetime_local_field_tag 'start_date',"", class:'form-control'%>
+        </div>  
+
+        <br>
+
+        <div class='form-group'>
+
+          <button type=submit class='btn btn-outline-warning'>Créer l'évènement</button>
+
+        </div>
+      <% end %>
+      <%= link_to "Retour", root_path %>
+    </div>
+  </div>
+</div>

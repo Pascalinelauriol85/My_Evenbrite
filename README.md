@@ -1,6 +1,6 @@
 # README
 liens de l'app Heroku
-https://eventhp.herokuapp.com/
+https://myevenbrite2021.herokuapp.com/
 
 
 - Ruby 2.7.1p83

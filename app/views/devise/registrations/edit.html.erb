@@ -1,4 +1,51 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+
+
+<div class="jumbotron text-center" style="background-image: url(https://as1.ftcdn.net/v2/jpg/03/15/46/02/1000_F_315460238_r9VGtbJzt7emruDKEY2ouioFPdcbMKs4.jpg); background-size: 100%;">>
+  <h1 class="display-4" style="color: #592316;"><strong>Modifier ton profil !</strong></h1>
+  <p class="lead" style="color: #592316;"><strong>Ajoute des infos sur toi !</p>
+  <hr class="my-4">
+  <p class="lead">
+  </p>
+</div>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+   <div class="form-group">
+       <label> Prénom : </label>
+       <%= f.text_field :first_name, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <label> Nom : </label>
+       <%= f.text_area :last_name, class: 'form-control' %>
+    </div>
+
+  
+    <div class="form-group">
+      <label> Description : </label>
+       <%= f.text_area :description, class: 'form-control' %>
+    </div>
+
+<div class="form-group">
+      <label> Email : </label>
+       <%= f.text_area :email, class: 'form-control' %>
+    </div>
+
+<br>
+    <div class="form-group">
+       <button type="submit" id="yellow-button"> Actualise ton profil </button>
+    </div>
+<br>
+<% end %>
+
+<div class="jumbotron text-center" style="background-image: url(https://as1.ftcdn.net/v2/jpg/03/15/46/02/1000_F_315460238_r9VGtbJzt7emruDKEY2ouioFPdcbMKs4.jpg); background-size: 100%;">>
+  <h1 class="display-4" style="color: #592316;"><strong>Modifier ton mot de passe !</strong></h1>
+  <p class="lead" style="color: #592316;"><strong>Ne modifie pas si cela ne t'interresse pas !</p>
+  <hr class="my-4">
+  <p class="lead">
+  </p>
+</div>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
@@ -30,14 +77,25 @@
     <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
     <%= f.password_field :current_password, autocomplete: "current-password" %>
   </div>
-
+<br>
   <div class="actions">
     <%= f.submit "Update" %>
   </div>
 <% end %>
+<br>
 
-<h3>Cancel my account</h3>
+<div class="jumbotron text-center" style="background-image: url(https://as1.ftcdn.net/v2/jpg/03/15/46/02/1000_F_315460238_r9VGtbJzt7emruDKEY2ouioFPdcbMKs4.jpg); background-size: 100%;">>
+  <h1 class="display-4" style="color: #592316;"><strong>Annule ton compte !</strong></h1>
+  <p class="lead" style="color: #592316;"><strong>Ne modifie pas si cela ne t'interresse pas !</p>
+  <hr class="my-4">
+  <p class="lead">
+  </p>
+</div>
+
 
 <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
 <%= link_to "Back", :back %>
+
+
+
