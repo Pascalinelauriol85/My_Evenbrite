@@ -9,21 +9,6 @@
 </div>
 
 <!-- carte -->
-<div class="row d-flex justify-content-evenly">
-  <div class="card" style="width: 18rem; background-color:#9CCED9" img src="https://media.istockphoto.com/vectors/man-taking-selfie-photo-on-smartphone-camera-casual-male-cartoon-in-vector-id1152621134?s=612x612" class="card-img-top" alt="...">
-    <div class="card-body">
-     <%@event.each do |event|%>
-    <h5 class="card-title"><%=event.title%></h5>
-    
-    <p class="card-text"><%=event.description%></p>
-    <p><%=event.start_date.to_date%></p>    
-    <a href="#" class="btn btn" id="yellow-button">Afficher</a>
-    <a href="#" class="btn btn" id="yellow-button">Participation</a>
-    </div>
-    <%end%>
-  </div>
-
-<br>
 
 <div class="row d-flex justify-content-evenly">
   <div class="card" style="width: 18rem; background-color:#9CCED9" img src="https://media.istockphoto.com/vectors/man-taking-selfie-photo-on-smartphone-camera-casual-male-cartoon-in-vector-id1152621134?s=612x612" class="card-img-top" alt="...">
@@ -33,7 +18,7 @@
     
     <p class="card-text">La nature</p>
 
-    <a href="#" class="btn btn" id="yellow-button">Afficher</a>
+    <a href="event_path" class="btn btn" id="yellow-button">Afficher</a>
     <a href="#" class="btn btn" id="yellow-button">Participation</a>
     </div>
   </div>
@@ -45,7 +30,7 @@
     
     <p class="card-text">Art / Deco</p>
 
-    <a href="#" class="btn btn" id="yellow-button">Afficher</a>
+    <a href="event_path" class="btn btn" id="yellow-button">Afficher</a>
     <a href="#" class="btn btn" id="yellow-button">Participation</a>
     </div>
   </div>
@@ -57,7 +42,7 @@
     
     <p class="card-text">Stand de marchands de fleurs</p>
 
-    <a href="#" class="btn btn" id="yellow-button">Afficher</a>
+    <a href="event_path" class="btn btn" id="yellow-button">Afficher</a>
     <a href="#" class="btn btn" id="yellow-button">Participation</a>
     </div>
   </div>

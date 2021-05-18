@@ -70,5 +70,16 @@
             </div>
 
         </div>
+        <h2>Les évèments crées :</h2>
+  <div class="row">
+    <%@user.events.each do |event|%>
+      <div class="col-md-4 p-5">
+        <h2><%=event.title%></h2>
+        <p><%=event.description%></p>
+        <p><%=event.start_date.to_date%>
+        <p><a class="btn btn-outline-warning" href="href=<%=event_path(event.id)%>" role="button">Détails »</a></p>
+      </div>
+    <%end%>
+  </div>  
     </div>
 </div>
