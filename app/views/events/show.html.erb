@@ -1,13 +1,25 @@
 <!--jumbotron -->
 <div class="jumbotron" img src="https://media.routard.com/image/39/2/paris-de-nuit.1564392.w630.jpg" style="background-color: #4B9DA6;">
-  <h1 class="display-4" style="color: #735C3F;">Bienvenue !</h1>
-  <p class="lead">Voici l'ensemble des évènements si tu souhaites participer n'hesites pas à te connecter</p>
+  <h1 class="display-4" style="color: #735C3F;">Un super événement en prévision !</h1>
+  <p class="lead">Si tu n'est pas encore inscrit... dépêche toi !</p>
   <hr class="my-4">
   <p class="lead">
   </p>
 </div>
 
-<div class='container'>
+<div class='py-4'>
+  <div class='container text-center'>
+    <%if current_user.id != @event.admin.id && @event.users.exclude?(current_user.id)%>
+      <br>
+      <a class="btn btn-outline" id="yellow" href=<%=new_attendance_path(@event.id)%> role="button"><<<<  Inscription  >>>></a>
+      <%elsif current_user.id == @event.admin.id%>
+      <p>Pour en savoir plus sur mon évènement</p>
+      <a class="btn btn-outline-warning" href=<%=attendance_path(@event.id)%>>Mon espace évènement</a>
+    <%end%>
+   </div> 
+</div>
+
+<div class='container text-center'>
   <div class='containerfluid my-5'>
     <h2><%=@event.title%> <span class='text-muted'>by <%=@event.admin.email%></span></h2>
     <hr>

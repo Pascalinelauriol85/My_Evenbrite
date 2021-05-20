@@ -1,0 +1,28 @@
+<!--jumbotron -->
+<div class="jumbotron text-center" style="background-image: url(https://as1.ftcdn.net/v2/jpg/03/15/46/02/1000_F_315460238_r9VGtbJzt7emruDKEY2ouioFPdcbMKs4.jpg); background-size: 100%;">>
+  <h1 class="display-4" style="color: #592316;"><strong>Inscription</strong></h1>
+  <p class="lead" style="color: #592316;"><strong>Contribution pour ton évènement</p>
+  <hr class="my-4">
+  <p class="lead">
+  </p>
+</div>
+
+
+<%= form_tag attendances_path do %>
+<article>
+  <% if flash[:error].present? %>
+    <div id="error_explanation">
+      <p><%= flash[:error] %></p>
+    </div>
+  <% end %>
+  <label class="amount">
+    <span>Paiement de $5.00</span>
+  </label>
+</article>
+<script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+    data-description="Achat d'un produit"
+    data-amount="500"
+    data-locale="fr">
+</script>
+<% end %>
